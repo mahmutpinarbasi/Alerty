@@ -1,0 +1,12 @@
+/*
+ Localizable.strings
+ Pods
+ 
+ Created by Mahmut Pinarbasi on 06.10.2018.
+ 
+ */
+
+"button_title_cancel" = "Tamam";
+"title_success" = "TEBRİKLER";
+"title_error" = "HATA";
+"title_warning" = "UYARI";

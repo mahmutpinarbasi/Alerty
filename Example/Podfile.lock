@@ -1,0 +1,16 @@
+PODS:
+  - Alert (0.1.0)
+
+DEPENDENCIES:
+  - Alert (from `../`)
+
+EXTERNAL SOURCES:
+  Alert:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Alert: 86a9847b7efce282168faca2a5424d64979ce667
+
+PODFILE CHECKSUM: 552fa1da9613833651eb1c5290735335d3afab8e
+
+COCOAPODS: 1.4.0

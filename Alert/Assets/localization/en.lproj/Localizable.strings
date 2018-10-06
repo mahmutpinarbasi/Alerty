@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by Mahmut Pinarbasi on 06.10.2018.
+  
+*/
+
+"button_title_cancel" = "OK";
+"title_success" = "CONGRATULATIONS";
+"title_error" = "ERROR";
+"title_warning" = "WARNING";
