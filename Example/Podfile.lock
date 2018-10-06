@@ -1,16 +1,16 @@
 PODS:
-  - Alert (0.1.0)
+  - Alerty (0.1.0)
 
 DEPENDENCIES:
-  - Alert (from `../`)
+  - Alerty (from `../`)
 
 EXTERNAL SOURCES:
-  Alert:
+  Alerty:
     :path: ../
 
 SPEC CHECKSUMS:
-  Alert: 86a9847b7efce282168faca2a5424d64979ce667
+  Alerty: 4eee82c10159191bdbeae10ad02e19f5fd77bbf0
 
-PODFILE CHECKSUM: 552fa1da9613833651eb1c5290735335d3afab8e
+PODFILE CHECKSUM: 06de85f4d2fded8f6974babffbec253c0d190e25
 
 COCOAPODS: 1.4.0
