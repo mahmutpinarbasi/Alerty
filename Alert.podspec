@@ -1,4 +1,4 @@
-#pod lib lint CardInput.podspec
+#pod lib lint Alert.podspec
 
 Pod::Spec.new do |s|
   s.name = 'Alert'
