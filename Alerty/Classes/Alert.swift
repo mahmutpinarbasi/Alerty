@@ -86,6 +86,9 @@ public extension Alert {
                                                                       NSAttributedString.Key.kern:Alert.Attributes.Kern.button
         ]
         
+        /// Blur style of the Alert
+        public static var blurStyle:UIBlurEffect.Style = UIBlurEffect.Style.light
+        
     }
     
     
@@ -94,10 +97,11 @@ public extension Alert {
 
 public final class Alert: UIViewController {
 
-    @IBOutlet weak private var lblTitle: UILabel!
-    @IBOutlet weak private var lblDetail: UILabel!
-    @IBOutlet weak private var imageView: UIImageView!
-    @IBOutlet weak private var btnCancel: AlertButton!
+    @IBOutlet private weak var lblTitle: UILabel!
+    @IBOutlet private weak var lblDetail: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var btnCancel: AlertButton!
+    @IBOutlet private weak var visualEffectView: UIVisualEffectView!
     
     
     public enum Style: Int {
@@ -109,6 +113,7 @@ public final class Alert: UIViewController {
     private let style:Alert.Style /// the style of alert
     private let header:String /// the title of alert
     private let message:String /// the message of alert
+    
     
     public init(style:Alert.Style, title:String, message:String){
         self.style = style
@@ -146,7 +151,7 @@ public final class Alert: UIViewController {
         self.lblTitle.attributedText = NSAttributedString(string: self.header, attributes: Alert.Attributes.titleAttributes)
         self.lblDetail.attributedText = NSAttributedString(string: self.message, attributes: Alert.Attributes.messageAttributes)
         self.btnCancel.setAttributedTitle(NSAttributedString(string: "OK", attributes: Alert.Attributes.buttonAttributes), for: .normal)
-        
+        self.visualEffectView.effect = UIBlurEffect(style: Alert.Attributes.blurStyle)
     }
     
     @IBAction private func cancelButtonTapped(_ sender: Any) {
@@ -188,7 +193,7 @@ extension Alert.Style {
 
 public extension Bundle {
     public static func alertBundle() -> Bundle? {
-        guard let path = Bundle.init(for: Alert.classForCoder()).path(forResource: "Alert", ofType: "bundle") else {
+        guard let path = Bundle.init(for: Alert.classForCoder()).path(forResource: "Alerty", ofType: "bundle") else {
             return nil
         }
         return Bundle.init(path: path)

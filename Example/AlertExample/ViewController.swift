@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alert
+import Alerty
 
 class ViewController: UIViewController {
 
