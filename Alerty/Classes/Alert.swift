@@ -103,6 +103,8 @@ public final class Alert: UIViewController {
     @IBOutlet private weak var btnCancel: AlertButton!
     @IBOutlet private weak var visualEffectView: UIVisualEffectView!
     
+    /// The closure that's called on alert dismiss completion.
+    public var onDismiss: (() -> Void)? = nil
     
     public enum Style: Int {
         case success
@@ -150,12 +152,15 @@ public final class Alert: UIViewController {
         self.imageView.image = self.style.image
         self.lblTitle.attributedText = NSAttributedString(string: self.header, attributes: Alert.Attributes.titleAttributes)
         self.lblDetail.attributedText = NSAttributedString(string: self.message, attributes: Alert.Attributes.messageAttributes)
-        self.btnCancel.setAttributedTitle(NSAttributedString(string: "OK", attributes: Alert.Attributes.buttonAttributes), for: .normal)
+        self.btnCancel.setAttributedTitle(NSAttributedString(string: Localized.localize("button_title_cancel"), attributes: Alert.Attributes.buttonAttributes), for: .normal)
         self.visualEffectView.effect = UIBlurEffect(style: Alert.Attributes.blurStyle)
     }
     
     @IBAction private func cancelButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.onDismiss?()
+        }
     }
 }
 

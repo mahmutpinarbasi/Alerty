@@ -16,7 +16,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func successTapped(_ sender: Any) {
-        self.showFor(style: Alert.Style.success, message: "İşleminiz başarıyla gerçekleştirildi.")
+        let alert = Alert.init(style: Alert.Style.success, message: "İşleminiz başarıyla gerçekleştirildi.")
+        self.present(alert, animated: true, completion: nil)
+        alert.onDismiss = {
+            let alert = Alert.init(style: Alert.Style.warning, message: "WARNING.")
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction private func warningTapped(_ sender: Any) {
@@ -31,6 +36,7 @@ class ViewController: UIViewController {
     private func showFor(style:Alert.Style, message:String){
         let alert = Alert.init(style: style, message: message)
         self.present(alert, animated: true, completion: nil)
+        
     }
     
 }
