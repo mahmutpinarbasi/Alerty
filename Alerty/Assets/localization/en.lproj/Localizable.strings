@@ -10,3 +10,4 @@
 "title_success" = "CONGRATULATIONS";
 "title_error" = "ERROR";
 "title_warning" = "WARNING";
+"title_info" = "INFO";

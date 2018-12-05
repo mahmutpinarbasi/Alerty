@@ -1,5 +1,5 @@
 PODS:
-  - Alerty (0.1.0)
+  - Alerty (0.1.2)
 
 DEPENDENCIES:
   - Alerty (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Alerty: 4eee82c10159191bdbeae10ad02e19f5fd77bbf0
+  Alerty: 26c1d22c366eb110d7f2d814073c7b6144e94203
 
 PODFILE CHECKSUM: 06de85f4d2fded8f6974babffbec253c0d190e25
 
