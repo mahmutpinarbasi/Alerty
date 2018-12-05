@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'Alerty'
-  s.version = '0.1.2'
+  s.version = '0.2.0'
   s.license = 'MIT'
   s.summary = 'An object that displays an alert message to the user.'
   s.homepage = 'https://github.com/mahmutpinarbasi/Alerty.git'
